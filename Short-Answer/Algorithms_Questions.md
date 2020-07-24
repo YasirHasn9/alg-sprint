@@ -19,7 +19,8 @@ b)  sum = 0
       while j < n:
         j *= 2
         sum += 1
-```
+``` 
+n log(n)
 
 
 ```
