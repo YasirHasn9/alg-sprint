@@ -93,12 +93,61 @@ class SortingRobot:
         return self._light == "ON"
 
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        # Fill this out
-        pass
+        '''
+        1.the robot cant move when it is at the last position in the list
+        2. the robot cant move left when it is at the first position
+        make sense
+        robot's position at list[len(list) - 1] cant move right
+        robot's position at list[0] cant move left
+        when moving right: time increases by 1 as well as the position
+        when moving left: time increases by 1  but the the position decrements
 
+        3. robot swaps its item and increments the time
+        self._item,                 self._list[self._position] = 
+
+        self._list[self._position],        self._item
+
+        4.compare them
+           greater --> 1
+           less --> -1
+           equal --> 0
+           none --> None
+        '''
+        # robot is on == TRUE
+        self.set_light_on() 
+        # pick up first item
+        self.swap_item()
+        # treated as true value
+        while self.light_is_on(): 
+            # when the robot at not the last position
+            while self.can_move_right():
+                # keeping moving right
+                self.move_right()
+
+                # compares the values
+                if self.compare_item() >= 1:  
+                    self.swap_item()
+        
+            
+            #move the robots's small values to the left
+            # when they have values
+            while self.compare_item() != None: 
+                self.move_left()
+                if self.compare_item() is None:
+                    self.swap_item() 
+            
+            # if robot can go right, 
+            if self.can_move_right():
+                self.move_right()  
+                self.swap_item()  
+
+            else:
+                self.swap_item()
+                # we needed as a false value for comparsing and for iteration of
+                # while - loop
+                self.set_light_off() #FALSE
+
+            
 
 if __name__ == "__main__":
     # Test our your implementation from the command line
