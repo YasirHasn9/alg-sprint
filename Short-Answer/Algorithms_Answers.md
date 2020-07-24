@@ -24,5 +24,13 @@ c) ) runtime is O(n)
      of bunnies(n size)
 
 ## Exercise II
+#plenty of eggs 
+#building with number of floors 
+if an egg threw:
+     if floor_height >= f:
+         the egg gets broken
+     else:
+         not
+we throw an egg linearly with the number of floors , so the time complexity is O(n)
 
 
