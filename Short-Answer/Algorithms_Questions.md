@@ -12,9 +12,6 @@ a)  a = 0
 ```
 
 
-
-
-
 ```
 b)  sum = 0
     for i in range(n):
@@ -23,6 +20,7 @@ b)  sum = 0
         j *= 2
         sum += 1
 ```
+
 
 ```
 c)  def bunnyEars(bunnies):
