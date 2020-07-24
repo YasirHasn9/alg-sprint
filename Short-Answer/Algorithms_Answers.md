@@ -15,11 +15,13 @@ output:
 this will run 4 times logarithmically  way not linearly 
 
 
-b) n^2 
+b) runtime is O(n^2) 
 because the nested while loop inside the for loop will make it run double the n size
 
 
-c)
+c) ) runtime is O(n)
+     because of the recursive function that technically relies of the input size
+     of bunnies(n size)
 
 ## Exercise II
 
